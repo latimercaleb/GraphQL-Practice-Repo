@@ -1,0 +1,20 @@
+{
+  "name": "graphqlblog",
+  "version": "1.0.0",
+  "description": "Graphql api demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel Project --out-dir dist/ && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

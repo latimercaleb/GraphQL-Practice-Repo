@@ -158,8 +158,14 @@ Mutations are in series to prevent race conditions as one mutation can add data 
 Each file should correspond to one query or one mutation
 ## Project Scope
 Outline files
-Insteall dependancies
+Install dependancies
 Build a graphQL api
 Configure Babel
 Write database with Dummy database
 Implement request structure
+
+## Project dependancies
+- GraphQL
+- Babel tools
+
+## Babel Configuration
