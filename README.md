@@ -155,9 +155,11 @@ On execution a new post would be written to the database, Queries should read on
 Queries are concurrent and are done parallel to one another
 Mutations are in series to prevent race conditions as one mutation can add data required for another mutations
 
+Each file should correspond to one query or one mutation
 ## Project Scope
-Build a graphQL api
+Outline files
 Insteall dependancies
+Build a graphQL api
 Configure Babel
 Write database with Dummy database
 Implement request structure
