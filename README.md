@@ -169,3 +169,11 @@ Implement request structure
 - Babel tools
 
 ## Babel Configuration
+
+
+## Building schemas
+A schema defines how ppl can interact with the api and has 4 building blocks:
+- Object Types
+- Queries
+- Input object types
+- Mutations
