@@ -189,5 +189,5 @@ To use import in the project as well as other ES6 features babel needs to be ini
 A schema defines how ppl can interact with the api and has 4 building blocks:
 - Object Types
 - Queries
-- Input object types
+- Input object types: Used for when users send data to api, checks against these to ensure that user sends data of the right type, used in both queries and mutations
 - Mutations
