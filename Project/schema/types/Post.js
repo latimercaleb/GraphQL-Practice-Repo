@@ -7,8 +7,10 @@
 
   A more complex relationship exists between blogpost and comments, since a single post can have one or more comments. Graphql must tell it to resolve in a list
 
+
+  An input object type requires a name a description and the fields to edit in the mutation, in the constructor we use Non-null again because we can't add empty fields in the db
 */
-import {GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList} from 'graphql';
+import {GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList,GraphQLNonNull,GraphQLInputObjectType} from 'graphql';
 import {Author} from 'Author';
 import {Comment} from "Comment";
 import {fakeDatabase} from '../../fakeDatabase';
@@ -32,4 +34,14 @@ export const Post = new GraphQLObjectType({
       }
     }
   })
+})
+
+// Input object
+export const PostInputType = new GraphQLInputObjectType({
+  name: "PostInput",
+  fields: {
+    title: {type: new GraphQLNonNull(GraphQLString)},
+    content: {type: new GraphQLNonNull(GraphQLString)},
+    author: {type: new GraphQLNonNull(GraphQLString)}
+  }
 })
