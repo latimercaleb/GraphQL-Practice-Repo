@@ -188,6 +188,9 @@ To use import in the project as well as other ES6 features babel needs to be ini
 ## Building schemas
 A schema defines how ppl can interact with the api and has 4 building blocks:
 - Object Types: Basically like a class, tells graphql what kinds of objects the api should expect and what can be returned
-- Queries
+
+- Queries: Must define root field in order for queries to work appropriately when fetching data
+
 - Input object types: Used for when users send data to api, checks against these to ensure that user sends data of the right type, used in both queries and mutations
+
 - Mutations
