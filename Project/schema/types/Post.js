@@ -11,8 +11,8 @@
   An input object type requires a name a description and the fields to edit in the mutation, in the constructor we use Non-null again because we can't add empty fields in the db
 */
 import {GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList,GraphQLNonNull,GraphQLInputObjectType} from 'graphql';
-import {Author} from 'Author';
-import {Comment} from "Comment";
+import {Author} from './Author';
+import {Comment} from "./Comment";
 import {fakeDatabase} from '../../fakeDatabase';
 export const Post = new GraphQLObjectType({
   name: "Post",

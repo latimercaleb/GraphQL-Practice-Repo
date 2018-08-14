@@ -3,7 +3,7 @@ import {fakeDatabase} from '../../FakeDatabase';
 import {Comment, CommentInputType} from '../types/Comment';
 export default {
   addComment: {
-    type: Comment
+    type: Comment,
     description: "Creates a new comment",
     args: {
       comment: {type: CommentInputType}

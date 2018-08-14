@@ -8,7 +8,7 @@ export const Comment = new GraphQLObjectType({
   description: "All details of a comment",
   fields: () => ({
     id: {type: GraphQLInt},
-    postId: {/*...*/},
+    //postId: {/*...*/},
     name: {type: GraphQLString},
     content: {type: GraphQLString},
   })

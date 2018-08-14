@@ -9,7 +9,7 @@
   To actually go about fetching posts we must wrap these types in queries in the queries folder
 */
 import {GraphQLObjectType, GraphQLString,GraphQLList} from 'graphql';
-import {Post} from 'Post';
+import {Post} from './Post';
 import {fakeDatabase} from '../../FakeDatabase'
 export const Author = new GraphQLObjectType({
   name: "Author",
@@ -18,7 +18,7 @@ export const Author = new GraphQLObjectType({
     id: {type: GraphQLString},
     name: {type: GraphQLString},
     email: {type: GraphQLString},
-    posts{
+    posts: {
       type: new GraphQLList(Post),
       resolve: (author) => {
         return fakeDatabase.getPostsOfAuthor(author.id);

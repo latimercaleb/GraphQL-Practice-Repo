@@ -6,7 +6,7 @@ import {fakeDatabase} from '../../FakeDatabase';
 import {Author} from '../types/Author';
 export default {
   author: {
-    type: Author
+    type: Author,
     description: "Gets a specific author",
     args: {
       id: {type: new GraphQLNonNull(GraphQLString)}
