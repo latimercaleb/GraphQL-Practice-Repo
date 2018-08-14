@@ -193,4 +193,4 @@ A schema defines how ppl can interact with the api and has 4 building blocks:
 
 - Input object types: Used for when users send data to api, checks against these to ensure that user sends data of the right type, used in  mutations and are attached to the /types folder in the same files as the object types
 
-- Mutations
+- Mutations: Must define means of adding to the db from the api
