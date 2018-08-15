@@ -36,13 +36,13 @@ var Post = exports.Post = new _graphql.GraphQLObjectType({
       author: {
         type: _Author.Author,
         resolve: function resolve(post) {
-          return fakedatabase.getAuthor(post.author);
+          return _fakeDatabase.fakeDatabase.getAuthor(post.author);
         }
       },
       comments: {
         type: new _graphql.GraphQLList(_Comment.Comment),
         resolve: function resolve(post) {
-          return getCommentsForPost(post.id);
+          return _fakeDatabase.fakeDatabase.getCommentsForPost(post.id);
         }
       }
     };

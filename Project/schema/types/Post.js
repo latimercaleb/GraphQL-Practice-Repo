@@ -24,13 +24,13 @@ export const Post = new GraphQLObjectType({
     author: {
       type: Author,
       resolve: (post) => {
-        return fakedatabase.getAuthor(post.author)
+        return fakeDatabase.getAuthor(post.author)
       }
     },
     comments: {
       type: new GraphQLList(Comment),
       resolve : (post) => {
-        return getCommentsForPost(post.id)
+        return fakeDatabase.getCommentsForPost(post.id)
       }
     }
   })

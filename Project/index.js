@@ -10,10 +10,18 @@ const query1 = `{
 }`;
 // Query2: List of all blogposts and the name of the author who wrote them???
 const query2= `{
-
+      posts{
+            title,
+            author {
+                  id
+                  name
+                  email
+            }
+      }
 }`;
 
 //To run a query do the following, graphql works by async and returns a promise which needs to be handled (resolve/failure) pattern
+
 // graphql(schema,query1).then(result => {
 //   // console.log("Original form: ",result); // Result is in object form
 //   let data = JSON.stringify(result,null,2);// stringify all fields and indent by 2 spaces
@@ -23,3 +31,11 @@ const query2= `{
 // })
 
 //Running the second query:
+graphql(schema,query2).then(result => {
+            let data = JSON.stringify(result,null,2);
+            console.log("Result: ", data);
+      }).catch(
+      error => {
+            console.log("Error detected:", error);
+      }
+)
