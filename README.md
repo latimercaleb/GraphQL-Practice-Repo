@@ -187,7 +187,16 @@ To use import in the project as well as other ES6 features babel needs to be ini
 
 ## Building schemas
 A schema defines how ppl can interact with the api and has 4 building blocks:
-- Object Types
-- Queries
-- Input object types
-- Mutations
+- Object Types: Basically like a class, tells graphql what kinds of objects the api should expect and what can be returned in a query
+
+- Queries: Must define root field in order for queries to work appropriately when fetching data
+
+- Input object types: Used for when users send data to api, checks against these to ensure that user sends data of the right type, used in  mutations and are attached to the /types folder in the same files as the object types
+
+- Mutations: Must define means of adding to the db from the api
+
+Once a schema is complete it can expose data to clients and how clients can write to the api
+
+It lives in /schema/index.js and basically serves as a wrapper for all the mutations and queries written prior by using imports and es6 spread
+
+Kick off testing with `npm run build`
