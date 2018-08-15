@@ -11,6 +11,7 @@ var query1 = '{\n  posts{\n    title\n  }\n}';
 var query2 = '{\n      posts{\n            title,\n            author {\n                  id\n                  name\n                  email\n            }\n      }\n}';
 
 //To run a query do the following, graphql works by async and returns a promise which needs to be handled (resolve/failure) pattern
+
 // graphql(schema,query1).then(result => {
 //   // console.log("Original form: ",result); // Result is in object form
 //   let data = JSON.stringify(result,null,2);// stringify all fields and indent by 2 spaces

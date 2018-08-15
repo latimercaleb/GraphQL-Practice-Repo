@@ -200,3 +200,18 @@ Once a schema is complete it can expose data to clients and how clients can writ
 It lives in /schema/index.js and basically serves as a wrapper for all the mutations and queries written prior by using imports and es6 spread
 
 Kick off testing with `npm run build`
+
+## Graphiql
+Graphiql is a tool to enable api testing. Api testing can only be done by using it to send requests and handle responses from a webserver for REST we have Scripts,Paw,Postman etc.
+Graphiql is much like that but much smarter, it offers alot of support and runs completely in the browser. To use it you add a dependancy and some code but to use it, it needs to be on a webserver to do this we utilze express
+
+This is built out in `serve.js` so now all that's left is to run it with `npm run serve` and look for it on `localhost:4000/graphiql`
+
+## Using Graphiql
+Left is where you write, right is where you see the result you can prettify and log queries ctrl+space triggers auto complete
+It helps with alot of stuff
+
+Docs, generates it's own documentation for you detailing everything about the api on it's own with the descriptions only from the type definitions
+
+## Conclusion
+Graphql is pretty awesome, Facebook, yelp and even github use it and now I have a more firm understanding
